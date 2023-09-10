@@ -1,0 +1,11 @@
+[
+  {
+    "name": "My Test Request",
+    "url": "https://httpstat.us/Random/200",
+    "method": "GET",
+    "headers": {
+      "username": "Testman"
+    },
+    "body": "Hello world!"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "name": "API-Tester",
+  "version": "0.0.1",
+  "description": "Open source local or self hosted REST API tester",
+  "scripts": {
+    "test": "npx vitest",
+    "unit": "npx vitest unit",
+    "integration": "npx vitest integration"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "bun-types": "^1.0.1",
+    "eslint": "^8.48.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "TODO"
+  },
+  "author": "Jannis Karanikis",
+  "keywords": [
+    "API",
+    "Testing",
+    "Typescript",
+    "Javascript",
+    "REST",
+    "Free"
+  ]
+}
