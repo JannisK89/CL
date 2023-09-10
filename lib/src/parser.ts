@@ -12,19 +12,21 @@ export type RequestData = {
 
 export type Collection = {
   name: string;
-  baseURL?: string;
+  baseUrl?: string;
   requests: RequestData[];
 };
 
-export const parseRequestFile = async () => {
-  const requests: Map<string, RequestData[]> = new Map();
-  const files = readdirSync("./requestFiles");
+export const parseRequestFiles = async (): Promise<Map<string, Collection>> => {
+  const requests: Map<string, Collection> = new Map();
+  const files = readdirSync("./requests");
 
   for (const file of files) {
-    const content: RequestData[] = await Bun.file(
-      `./requestFiles/${file}`
-    ).json();
-    requests.set(file.substring(0, file.indexOf(".")), content);
+    try {
+      const content: Collection = await Bun.file(`./requests/${file}`).json();
+      requests.set(content.name, content);
+    } catch (error) {
+      console.error(error);
+    }
   }
-  console.log(requests);
+  return requests;
 };
