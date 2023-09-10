@@ -1,0 +1,22 @@
+{
+  "name": "Request Collection 1",
+  "baseUrl": "https://httpstat.us",
+  "requests": [
+    {
+      "name": "My Test Request",
+      "url": "Random/200",
+      "method": "GET",
+      "headers": {
+        "username": "Testman"
+      },
+      "body": "Hello world!"
+    },
+    {
+      "name": "My Other Request",
+      "url": "Random/200",
+      "method": "GET",
+      "headers": {},
+      "body": ""
+    }
+  ]
+}
